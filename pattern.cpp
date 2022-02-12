@@ -818,6 +818,48 @@ void pattern33(int n){
        A
 */
 
+void pattern34(int n){
+    char ch = 'A'-1+n;
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n-i+1; j++){
+            char ch = 'A'-1+n;
+            ch = ch - i +1 -j +1;
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+
+
+
+
+/*  
+35.    1      1
+       12    21
+       123  321
+       12344321
+*/
+
+void pattern35(int n){
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            cout<<j;
+        }
+        for(int j=2*(n-i); j>=1; j--){
+            cout<<" ";
+        }
+         for(int j=i; j>=1; j--){
+            cout<<j;
+        }
+
+        cout<<endl;
+    }
+}
+
+
+
 
     
 
@@ -832,6 +874,6 @@ int main(){
     int n;
     cin>>n;
 
-    pattern2(n);
+    pattern34(n);
 
 }
