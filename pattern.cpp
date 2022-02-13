@@ -768,6 +768,23 @@ void pattern30 (int n){
          4 4 4 4 4 4 4
 */
 
+void pattern31(int n){
+    int e=2*n-1;
+    for(int i=1; i<=e; i++){
+        for(int j=n; j>abs(n-i); j--){               // Decreasing part
+            cout<<j<<" ";
+        }
+        for(int j=2*abs(n-i); j>=1; j--){            // Constant Part
+            cout<<abs(n-i)+1<<" ";
+        }
+        for(int j=1; j<n-abs(n-i); j++){             // Increasing Part
+            cout<<abs(n-i)+1+j<<" ";
+        }
+        
+        cout<<endl;
+    }
+}
+
 /*
 32.    E
        D E
@@ -874,6 +891,6 @@ int main(){
     int n;
     cin>>n;
 
-    pattern34(n);
+    pattern31(n);
 
 }
