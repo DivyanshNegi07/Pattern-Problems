@@ -897,15 +897,6 @@ void pattern35(int n){
 }
 
 
-
-
-    
-
-    
-
-
-
-
 int main(){
     
     cout<<"Input : " ;
