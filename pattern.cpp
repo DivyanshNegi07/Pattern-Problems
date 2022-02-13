@@ -1,5 +1,3 @@
-//  https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/blob/main/assignments/09-patterns.md   link to ques
-
 #include<iostream>
 using namespace std;
 
@@ -678,6 +676,33 @@ void pattern26(int n){
             10 11
 */
 
+void pattern27 (int n){
+    int a =1;
+    for(int i=1; i<=n; i++){
+        
+        for(int j=1; j<i; j++){
+            cout<<"  ";
+        }
+        for(int j=1; j<=n-i+1; j++){
+            
+            cout<<a++<<" ";
+        }
+        if(a<=10) cout<<" ";
+
+        int c= n-i;
+        int b=  (n*(n+1))/2 + (c*(c+1))/2 + 1;
+
+        for(int j=1; j<=n-i+1; j++){
+            cout<<b++<<" ";
+        }
+        
+        
+        
+        
+        cout<<endl;
+
+    }
+}
 /*
 28.      *
         * *
@@ -891,6 +916,6 @@ int main(){
     int n;
     cin>>n;
 
-    pattern31(n);
+    pattern27(n);
 
 }
